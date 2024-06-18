@@ -1,6 +1,11 @@
+
+import './style.css';
+
 const SecondComponent = () => {
     return (
-        <h2>Hello Edan Nguyen</h2>
+        <h2 className="edan" style={{ borderRadius: "10px" }}>
+            Hello Edan Nguyen
+        </h2>
     );
 }
 
