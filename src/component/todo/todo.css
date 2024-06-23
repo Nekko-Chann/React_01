@@ -29,6 +29,7 @@
 }
 
 .btn {
+    cursor: pointer;
     width: 15%;
     background-color: #f1e8e8;
     border: 1px solid #8a7d7d;
