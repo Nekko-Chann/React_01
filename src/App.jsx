@@ -6,6 +6,7 @@ import reactLogo from './assets/react.svg'
 
 const App = () => {
 
+  // Test với biến 
   const name = "Edan";
   const age = 25;
   const data = {
@@ -13,10 +14,15 @@ const App = () => {
     country: "Viet Nam"
   }
 
+  // Test vs function 
+  const addNewTodo = (name) => {
+    alert(`Call me!!! ${name}`)
+  }
+
   return (
     <div className="todo-container">
       <div className="todo-title">Todo List</div>
-      <TodoNew />
+      <TodoNew addNewTodo={addNewTodo} />
       <TodoData
         name={name}
         age={age}
