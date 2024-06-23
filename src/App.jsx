@@ -3,8 +3,14 @@ import TodoData from './component/todo/TodoData'
 import TodoNew from './component/todo/TodoNew'
 import './component/todo/todo.css'
 import reactLogo from './assets/react.svg'
+import { useState } from 'react'
 
 const App = () => {
+
+  const [todoList, setTodoList] = useState([
+    { id: 1, name: "Learning React " },
+    { id: 2, name: "Watching Youtube" }
+  ])
 
   // Test với biến 
   const name = "Edan";
@@ -27,6 +33,7 @@ const App = () => {
         name={name}
         age={age}
         data={data}
+        todoList={todoList}
       />
       <div className='todo-image'>
         <img src={reactLogo} className='logo' alt="" />

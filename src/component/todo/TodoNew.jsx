@@ -1,15 +1,19 @@
+import { useState } from "react";
 
 const TodoNew = (props) => {
-    // console.log("check props: ", props);
+    // useState hook
+    const [valueInput, setValueInput] = useState("Edan") //destructuring array
+
     const { addNewTodo } = props;
     // addNewTodo("Edan");
 
     const handleClick = () => {
-        alert("Click me!")
+        console.log("Check valueInput: ", valueInput)
+
     }
 
     const handleOnChange = (name) => {
-        console.log("HandleOnChange: ", name.target.value)
+        setValueInput(name)
     }
 
     return (
@@ -17,13 +21,16 @@ const TodoNew = (props) => {
             <input
                 type="text"
                 className="todo-input"
-                onChange={(event) => handleOnChange(event)}
+                onChange={(event) => handleOnChange(event.target.value)}
                 placeholder='Enter your task' />
             <button
                 className='btn'
                 onClick={handleClick}
             >Add
             </button>
+            <div>
+                My text input is: {valueInput}
+            </div>
         </div>
     );
 }
