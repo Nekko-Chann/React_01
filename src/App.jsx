@@ -22,7 +22,15 @@ const App = () => {
 
   // Test vs function 
   const addNewTodo = (name) => {
-    alert(`Call me!!! ${name}`)
+    const newTodo = {
+      id: randomIntFromInterval(1, 20000),
+      name: name
+    }
+    setTodoList([...todoList, newTodo])
+  }
+
+  const randomIntFromInterval = (min, max) => { // min and max included
+    return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
   return (
