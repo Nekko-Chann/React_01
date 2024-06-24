@@ -46,6 +46,10 @@
     gap: 15px;
 }
 
+.todo-data button {
+    cursor: pointer;
+}
+
 .todo-image {
     text-align: center;
     margin-top: 15px;
